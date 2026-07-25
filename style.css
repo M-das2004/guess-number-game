@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2
+    );
+}
+
+.game-container {
+    width: 90%;
+    max-width: 450px;
+
+    padding: 35px;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+
+    animation: slideUp 0.8s ease;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.description {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    margin: 20px 0;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+
+    font-weight: bold;
+    color: #444;
+}
+
+input {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 2px solid #ddd;
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #667eea;
+
+    box-shadow: 0 0 8px rgba(102, 126, 234, 0.4);
+}
+
+button {
+    padding: 13px 25px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #667eea;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #4f63c4;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+.quit-btn {
+    background: #e74c3c;
+}
+
+.quit-btn:hover {
+    background: #c0392b;
+}
+
+#message {
+    margin: 25px 0 15px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    min-height: 25px;
+}
+
+#rangeText {
+    color: #555;
+    font-weight: bold;
+}
+
+#attempts {
+    color: #667eea;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+.success {
+    color: #27ae60;
+}
+
+.error {
+    color: #e74c3c;
+}
+
+.warning {
+    color: #f39c12;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 500px) {
+
+    .game-container {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}

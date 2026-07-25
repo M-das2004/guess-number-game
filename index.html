@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Guess the Random Number Game</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game-container">
+
+        <h1>Guess the Number</h1>
+
+        <p class="description">
+            Guess the random number between 1 and your selected maximum range.
+        </p>
+
+        <div class="input-group">
+            <label for="maxRange">Enter Maximum Range</label>
+            <input 
+                type="number" 
+                id="maxRange" 
+                placeholder="Example: 100"
+                min="1"
+            >
+        </div>
+
+        <button id="startBtn">Start Game</button>
+
+        <div id="gameArea" class="hidden">
+
+            <p id="rangeText"></p>
+
+            <div class="input-group">
+                <label for="guessInput">Enter Your Guess</label>
+
+                <input 
+                    type="number" 
+                    id="guessInput"
+                    placeholder="Enter a number"
+                >
+            </div>
+
+            <div class="buttons">
+                <button id="guessBtn">Guess</button>
+                <button id="quitBtn" class="quit-btn">Quit</button>
+            </div>
+
+            <p id="message"></p>
+
+            <p>
+                Attempts: <span id="attempts">0</span>
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
